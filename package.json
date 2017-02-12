@@ -1,6 +1,12 @@
 {
-  "name": "node-api",
+  "name": "inliner_server",
+  "version": "1.0.0",
+  "description": "Inline web pages",
+  "author": "Tom Barton <trb1g14@soton.ac.uk>",
   "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "express": "~4.0.0",
     "body-parser": "~1.0.1",
