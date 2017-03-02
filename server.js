@@ -10,14 +10,20 @@ app.get('/notes', function(req, res) {
     res.json({notes: "This is your notebook. Edit this to start saving your notes!"})
 });
 
-app.get('/api', function(req, res) {
-    new Inliner('http://bbc.co.uk/news/popular/read', function (error, html) {
+app.post('/api', function(req, res) {
+    console.log("Working on it!");
+    var url = req.body.url;
+    console.log("URL: " + url);
+    var opts = {
+        images: false
+    };
+    new Inliner(url, opts, function (error, html) {
         // compressed and inlined HTML page
         console.log(error);
-        console.log(html);
+        //console.log(html);
         res.send(html)
     });
 
 });
 
-app.listen(3000);
+app.listen(7300);
