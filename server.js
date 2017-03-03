@@ -7,6 +7,7 @@ var cors = require('cors');
 
 app.use(bodyParser.json());
 app.use(cors());
+app.disable('view cache');
 
 app.post('/api', function(req, res) {
     res.header("Access-Control-Allow-Origin", "*");
